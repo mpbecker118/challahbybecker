@@ -25,9 +25,9 @@ const Checkout = class extends React.Component {
   async redirectToCheckout(event) {
     event.preventDefault()
     const { error } = await this.stripe.redirectToCheckout({
-      items: [{ sku: "sku_EsN4OZ4w6vsegr", quantity: 1 }],
-      successUrl: `http://localhost:8000/page-2/`,
-      cancelUrl: `http://localhost:8000/`,
+      items: [{ sku: "sku_EsaS54AiSKhsjN", quantity: 1 }],
+      successUrl: window.location.protocol + '//challahbybecker.com/success',
+      cancelUrl: window.location.protocol + '//challahbybecker.com/canceled',
     })
 
     if (error) {
